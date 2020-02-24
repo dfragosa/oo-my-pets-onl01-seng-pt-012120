@@ -70,8 +70,8 @@ class Owner
   
   def sell_pets
     #binding.pry
-   pets.each do |pet, arr|
-     arr.map do |pet|
+   pets.each do |pet, moods|
+     moods.map do |pet|
      pet.mood 
      end
       arr.clear
