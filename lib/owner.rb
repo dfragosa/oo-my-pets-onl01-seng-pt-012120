@@ -68,15 +68,14 @@ class Owner
     cats.collect {|eat| eat.mood = "happy"}  
   end
   
-  def sell_pets
-    #binding.pry
-   pets.each do |pet, arr|
-     arr.map do |pet|
-     pet.mood 
-     end
-      arr.clear
+   def sell_pets
+   my_pets = self.cats  + self.dogs
+   my_pets.each do |pets|
+     #binding.pry
+     pets.mood = "nervous"
+     pets.owner = nil
     end
-  end
+   end
   
   def list_pets
     "I have #{dogs.count} dog(s), and #{cats.count} cat(s)."
